@@ -1,0 +1,92 @@
+General
+Complete name                            : /home/johan/detectDamgedWAVs/data/frogs-01.wav
+Format                                   : Wave
+File size                                : 1.96 MiB
+Duration                                 : 11s 626ms
+Overall bit rate mode                    : Constant
+Overall bit rate                         : 1 411 Kbps
+Track name                               : untitled
+
+Audio
+Format                                   : PCM
+Format settings, Endianness              : Little
+Format settings, Sign                    : Signed
+Codec ID                                 : 1
+Duration                                 : 11s 626ms
+Bit rate mode                            : Constant
+Bit rate                                 : 1 411.2 Kbps
+Channel(s)                               : 2 channels
+Sampling rate                            : 44.1 KHz
+Bit depth                                : 16 bits
+Stream size                              : 1.96 MiB (100%)
+
+
+General
+Complete name                            : /home/johan/detectDamgedWAVs/data/frogs-01-byte-missing-at-offset-811537.wav
+Format                                   : Wave
+File size                                : 1.96 MiB
+Duration                                 : 11s 626ms
+Overall bit rate mode                    : Constant
+Overall bit rate                         : 1 411 Kbps
+
+Audio
+Format                                   : PCM
+Format settings, Endianness              : Little
+Format settings, Sign                    : Signed
+Codec ID                                 : 1
+Duration                                 : 11s 626ms
+Bit rate mode                            : Constant
+Bit rate                                 : 1 411.2 Kbps
+Channel(s)                               : 2 channels
+Sampling rate                            : 44.1 KHz
+Bit depth                                : 16 bits
+Stream size                              : 1.96 MiB (100%)
+
+
+General
+Complete name                            : /home/johan/detectDamgedWAVs/data/frogs-01-ffmeg.wav
+Format                                   : Wave
+File size                                : 1.96 MiB
+Duration                                 : 11s 626ms
+Overall bit rate mode                    : Constant
+Overall bit rate                         : 1 411 Kbps
+Track name                               : untitled
+Writing application                      : Lavf57.56.100
+
+Audio
+Format                                   : PCM
+Format settings, Endianness              : Little
+Format settings, Sign                    : Signed
+Codec ID                                 : 1
+Duration                                 : 11s 626ms
+Bit rate mode                            : Constant
+Bit rate                                 : 1 411.2 Kbps
+Channel(s)                               : 2 channels
+Sampling rate                            : 44.1 KHz
+Bit depth                                : 16 bits
+Stream size                              : 1.96 MiB (100%)
+
+
+General
+Complete name                            : /home/johan/detectDamgedWAVs/data/frogs-01-last-byte-missing.wav
+Format                                   : Wave
+File size                                : 1.96 MiB
+Duration                                 : 11s 626ms
+Overall bit rate mode                    : Constant
+Overall bit rate                         : 1 411 Kbps
+Track name                               : untitled
+
+Audio
+Format                                   : PCM
+Format settings, Endianness              : Little
+Format settings, Sign                    : Signed
+Codec ID                                 : 1
+Duration                                 : 11s 626ms
+Bit rate mode                            : Constant
+Bit rate                                 : 1 411.2 Kbps
+Channel(s)                               : 2 channels
+Sampling rate                            : 44.1 KHz
+Bit depth                                : 16 bits
+Stream size                              : 1.96 MiB (100%)
+
+
