@@ -1,4 +1,5 @@
 <!-- Breaking Waves -->
+<!-- Structure: for clarity start off with WAV; then move to FLAC at the end -->
 
 Intro text ...
 
