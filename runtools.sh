@@ -25,5 +25,6 @@ while IFS= read -d $'\0' inputFile ; do
     shntool info $inputFile >> $outDir/shntool.txt
     ffprobe $inputFile -show_format -show_streams >> $outDir/ffprobe.txt
     mediainfo $inputFile -show_format -show_streams >> $outDir/mediainfo.txt
+    flac -t $inputFile >> $outDir/flac.txt
 
 done < <(find "$dataDir" -maxdepth 1 -mindepth 1 -print0 -type f)
