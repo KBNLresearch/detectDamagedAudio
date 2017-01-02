@@ -7,7 +7,7 @@ Determine what is the best software tool for detecting damaged/incomplete/trunca
 
 * [frogs-01.wav](./data/frogs-01.wav) - intact WAV file
 * [frogs-01-last-byte-missing.wav](./data/frogs-01-last-byte-missing.wav) - last byte is missing
-* [frogs-01-byte-missing-at-offset-811537.wav](./data/frogs-01-byte-missing-at-offset-811537.wav) - byte missing at byte offset 811537
+* [frogs-01-byte-missing-at-offset-811537.wav](./data/frogs-01-byte-missing-at-offset-811537.wav) - byte missing at offset 811537
 
 ## Tools
 
@@ -20,8 +20,14 @@ Note: *ffprobe* and *mediainfo* are primarily tools for extracting technical inf
 
 ## Tests
 
+[This shell script](./runtools.sh) runs the above tools on every file in the *Data* folder. I used the following command line arguments (note that JHOVE is called twice here, using slightly different command line arguments):
+
     jhove foo.wav
     jhove -m WAVE-hul foo.wav
-    shntool info foo.wav > shntool.txt
-    ffprobe foo.wav -show_format -show_streams > ffprobe.txt
+    shntool info foo.wav
+    ffprobe foo.wav -show_format -show_streams
+    mediainfo foo.wav
+
+## Results
+
  
