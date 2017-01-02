@@ -1,71 +1,5 @@
 -------------------------------------------------------------------------------
-File name:                    /home/johan/detectDamgedWAVs/data/frogs-01.wav
-Handled by:                   wav format module
-Length:                       0:11.47
-WAVE format:                  0x0001 (Microsoft PCM)
-Channels:                     2
-Bits/sample:                  16
-Samples/sec:                  44100
-Average bytes/sec:            176400
-Rate (calculated):            176400
-Block align:                  4
-Header size:                  44 bytes
-Data size:                    2050944 bytes
-Chunk size:                   2051072 bytes
-Total size (chunk size + 8):  2051080 bytes
-Actual file size:             2051080
-File is compressed:           no
-Compression ratio:            1.0000
-CD-quality properties:
-  CD quality:                 yes
-  Cut on sector boundary:     yes
-  Sector misalignment:        0 bytes
-  Long enough to be burned:   yes
-WAVE properties:
-  Non-canonical header:       no
-  Extra RIFF chunks:          yes (92 bytes)
-Possible problems:
-  File contains ID3v2 tag:    no
-  Data chunk block-aligned:   yes
-  Inconsistent header:        no
-  File probably truncated:    no
-  Junk appended to file:      no
-  Odd data size has pad byte: n/a
--------------------------------------------------------------------------------
-File name:                    /home/johan/detectDamgedWAVs/data/frogs-01-byte-missing-at-offset-811537.wav
-Handled by:                   wav format module
-Length:                       0:11.47
-WAVE format:                  0x0001 (Microsoft PCM)
-Channels:                     2
-Bits/sample:                  16
-Samples/sec:                  44100
-Average bytes/sec:            176400
-Rate (calculated):            176400
-Block align:                  4
-Header size:                  44 bytes
-Data size:                    2050944 bytes
-Chunk size:                   2051072 bytes
-Total size (chunk size + 8):  2051080 bytes
-Actual file size:             2051079
-File is compressed:           no
-Compression ratio:            1.0000
-CD-quality properties:
-  CD quality:                 yes
-  Cut on sector boundary:     yes
-  Sector misalignment:        0 bytes
-  Long enough to be burned:   yes
-WAVE properties:
-  Non-canonical header:       no
-  Extra RIFF chunks:          yes (92 bytes)
-Possible problems:
-  File contains ID3v2 tag:    no
-  Data chunk block-aligned:   yes
-  Inconsistent header:        no
-  File probably truncated:    yes (missing 1 byte)
-  Junk appended to file:      no
-  Odd data size has pad byte: n/a
--------------------------------------------------------------------------------
-File name:                    /home/johan/detectDamgedWAVs/data/frogs-01-ffmeg.wav
+File name:                    /home/johan/detectDamagedWAVs/data/frogs-01.wav
 Handled by:                   wav format module
 Length:                       0:11.47
 WAVE format:                  0x0001 (Microsoft PCM)
@@ -98,7 +32,7 @@ Possible problems:
   Junk appended to file:      no
   Odd data size has pad byte: n/a
 -------------------------------------------------------------------------------
-File name:                    /home/johan/detectDamgedWAVs/data/frogs-01-last-byte-missing.wav
+File name:                    /home/johan/detectDamagedWAVs/data/frogs-01-byte-missing-at-offset-811537.wav
 Handled by:                   wav format module
 Length:                       0:11.47
 WAVE format:                  0x0001 (Microsoft PCM)
@@ -108,11 +42,11 @@ Samples/sec:                  44100
 Average bytes/sec:            176400
 Rate (calculated):            176400
 Block align:                  4
-Header size:                  44 bytes
+Header size:                  96 bytes
 Data size:                    2050944 bytes
-Chunk size:                   2051072 bytes
-Total size (chunk size + 8):  2051080 bytes
-Actual file size:             2051079
+Chunk size:                   2051032 bytes
+Total size (chunk size + 8):  2051040 bytes
+Actual file size:             2051039
 File is compressed:           no
 Compression ratio:            1.0000
 CD-quality properties:
@@ -121,8 +55,41 @@ CD-quality properties:
   Sector misalignment:        0 bytes
   Long enough to be burned:   yes
 WAVE properties:
-  Non-canonical header:       no
-  Extra RIFF chunks:          yes (92 bytes)
+  Non-canonical header:       yes
+  Extra RIFF chunks:          no
+Possible problems:
+  File contains ID3v2 tag:    no
+  Data chunk block-aligned:   yes
+  Inconsistent header:        no
+  File probably truncated:    yes (missing 1 byte)
+  Junk appended to file:      no
+  Odd data size has pad byte: n/a
+-------------------------------------------------------------------------------
+File name:                    /home/johan/detectDamagedWAVs/data/frogs-01-last-byte-missing.wav
+Handled by:                   wav format module
+Length:                       0:11.47
+WAVE format:                  0x0001 (Microsoft PCM)
+Channels:                     2
+Bits/sample:                  16
+Samples/sec:                  44100
+Average bytes/sec:            176400
+Rate (calculated):            176400
+Block align:                  4
+Header size:                  96 bytes
+Data size:                    2050944 bytes
+Chunk size:                   2051032 bytes
+Total size (chunk size + 8):  2051040 bytes
+Actual file size:             2051039
+File is compressed:           no
+Compression ratio:            1.0000
+CD-quality properties:
+  CD quality:                 yes
+  Cut on sector boundary:     yes
+  Sector misalignment:        0 bytes
+  Long enough to be burned:   yes
+WAVE properties:
+  Non-canonical header:       yes
+  Extra RIFF chunks:          no
 Possible problems:
   File contains ID3v2 tag:    no
   Data chunk block-aligned:   yes

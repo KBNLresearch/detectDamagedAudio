@@ -1,156 +1,6 @@
 Jhove (Rel. 1.14.6, 2016-05-12)
- Date: 2017-01-02 18:23:45 CET
- RepresentationInformation: /home/johan/detectDamgedWAVs/data/frogs-01.wav
-  ReportingModule: WAVE-hul, Rel. 1.3 (2007-12-14)
-  LastModified: 2016-09-05 11:27:55 CEST
-  Size: 2051080
-  Format: WAVE
-  Status: Not well-formed
-  SignatureMatches:
-   WAVE-hul
-  InfoMessage: Chunk type 'ßþ0ü' ignored
-   Offset: 131080
-  ErrorMessage: Invalid character in Chunk ID: Character = 0x03
-   Offset: 131085
-  MIMEtype: audio/x-wave
-  Profile: PCMWAVEFORMAT
-  WAVEMetadata: 
-   AESAudioMetadata: 
-    AnalogDigitalFlag: FILE_DIGITAL
-    SchemaVersion: 1.02b
-    Format: WAVE
-    AudioDataEncoding: PCM audio in integer format
-    ByteOrder: LITTLE_ENDIAN
-    FirstSampleOffset: 44
-    Use:
-     UseType: OTHER
-     OtherType: JHOVE_validation
-    PrimaryIdentifier: /home/johan/detectDamgedWAVs/data/frogs-01.wav
-     IdentifierType: FILE_NAME
-    Face: 
-     TimeLine: 
-      StartTime:
-       FrameCount: 30
-       TimeBase: 1000
-       VideoField: FIELD_1
-       CountingMode: NTSC_NON_DROP_FRAME
-       Hours: 0
-       Minutes: 0
-       Seconds: 0
-       Frames: 0
-       Samples: 
-        SampleRate: S44100
-        NumberOfSamples: 0
-       FilmFraming: NOT_APPLICABLE
-        Type: ntscFilmFramingType
-      Duration:
-       FrameCount: 30
-       TimeBase: 1000
-       VideoField: FIELD_1
-       CountingMode: NTSC_NON_DROP_FRAME
-       Hours: 0
-       Minutes: 0
-       Seconds: 11
-       Frames: 18
-       Samples: 
-        SampleRate: S44100
-        NumberOfSamples: 1176
-       FilmFraming: NOT_APPLICABLE
-        Type: ntscFilmFramingType
-      NumChannels: 2
-      Stream:
-       ChannelNum: 0
-       ChannelAssignment: LEFT
-      Stream:
-       ChannelNum: 1
-       ChannelAssignment: RIGHT
-    FormatList:
-     FormatRegion:
-      BitDepth: 16
-      SampleRate: 44100.0
-   CompressionCode: PCM audio in integer format
-   AverageBytesPerSecond: 176400
-   BlockAlign: 4
-   Data: 
-    DataLength: 2050944
-Jhove (Rel. 1.14.6, 2016-05-12)
- Date: 2017-01-02 18:23:46 CET
- RepresentationInformation: /home/johan/detectDamgedWAVs/data/frogs-01-byte-missing-at-offset-811537.wav
-  ReportingModule: WAVE-hul, Rel. 1.3 (2007-12-14)
-  LastModified: 2017-01-02 17:18:00 CET
-  Size: 2051079
-  Format: WAVE
-  Status: Not well-formed
-  SignatureMatches:
-   WAVE-hul
-  InfoMessage: Chunk type 'ßþ0ü' ignored
-   Offset: 131080
-  ErrorMessage: Invalid character in Chunk ID: Character = 0x03
-   Offset: 131085
-  MIMEtype: audio/x-wave
-  Profile: PCMWAVEFORMAT
-  WAVEMetadata: 
-   AESAudioMetadata: 
-    AnalogDigitalFlag: FILE_DIGITAL
-    SchemaVersion: 1.02b
-    Format: WAVE
-    AudioDataEncoding: PCM audio in integer format
-    ByteOrder: LITTLE_ENDIAN
-    FirstSampleOffset: 44
-    Use:
-     UseType: OTHER
-     OtherType: JHOVE_validation
-    PrimaryIdentifier: /home/johan/detectDamgedWAVs/data/frogs-01-byte-missing-at-offset-811537.wav
-     IdentifierType: FILE_NAME
-    Face: 
-     TimeLine: 
-      StartTime:
-       FrameCount: 30
-       TimeBase: 1000
-       VideoField: FIELD_1
-       CountingMode: NTSC_NON_DROP_FRAME
-       Hours: 0
-       Minutes: 0
-       Seconds: 0
-       Frames: 0
-       Samples: 
-        SampleRate: S44100
-        NumberOfSamples: 0
-       FilmFraming: NOT_APPLICABLE
-        Type: ntscFilmFramingType
-      Duration:
-       FrameCount: 30
-       TimeBase: 1000
-       VideoField: FIELD_1
-       CountingMode: NTSC_NON_DROP_FRAME
-       Hours: 0
-       Minutes: 0
-       Seconds: 11
-       Frames: 18
-       Samples: 
-        SampleRate: S44100
-        NumberOfSamples: 1176
-       FilmFraming: NOT_APPLICABLE
-        Type: ntscFilmFramingType
-      NumChannels: 2
-      Stream:
-       ChannelNum: 0
-       ChannelAssignment: LEFT
-      Stream:
-       ChannelNum: 1
-       ChannelAssignment: RIGHT
-    FormatList:
-     FormatRegion:
-      BitDepth: 16
-      SampleRate: 44100.0
-   CompressionCode: PCM audio in integer format
-   AverageBytesPerSecond: 176400
-   BlockAlign: 4
-   Data: 
-    DataLength: 2050944
-Jhove (Rel. 1.14.6, 2016-05-12)
- Date: 2017-01-02 18:23:46 CET
- RepresentationInformation: /home/johan/detectDamgedWAVs/data/frogs-01-ffmeg.wav
+ Date: 2017-01-02 18:30:08 CET
+ RepresentationInformation: /home/johan/detectDamagedWAVs/data/frogs-01.wav
   ReportingModule: WAVE-hul, Rel. 1.3 (2007-12-14)
   LastModified: 2017-01-02 18:21:46 CET
   Size: 2051040
@@ -171,7 +21,7 @@ Jhove (Rel. 1.14.6, 2016-05-12)
     Use:
      UseType: OTHER
      OtherType: JHOVE_validation
-    PrimaryIdentifier: /home/johan/detectDamgedWAVs/data/frogs-01-ffmeg.wav
+    PrimaryIdentifier: /home/johan/detectDamagedWAVs/data/frogs-01.wav
      IdentifierType: FILE_NAME
     Face: 
      TimeLine: 
@@ -223,19 +73,15 @@ Jhove (Rel. 1.14.6, 2016-05-12)
    Data: 
     DataLength: 2050944
 Jhove (Rel. 1.14.6, 2016-05-12)
- Date: 2017-01-02 18:23:47 CET
- RepresentationInformation: /home/johan/detectDamgedWAVs/data/frogs-01-last-byte-missing.wav
+ Date: 2017-01-02 18:30:09 CET
+ RepresentationInformation: /home/johan/detectDamagedWAVs/data/frogs-01-byte-missing-at-offset-811537.wav
   ReportingModule: WAVE-hul, Rel. 1.3 (2007-12-14)
-  LastModified: 2017-01-02 17:16:31 CET
-  Size: 2051079
+  LastModified: 2017-01-02 18:29:51 CET
+  Size: 2051039
   Format: WAVE
-  Status: Not well-formed
+  Status: Well-Formed and valid
   SignatureMatches:
    WAVE-hul
-  InfoMessage: Chunk type 'ßþ0ü' ignored
-   Offset: 131080
-  ErrorMessage: Invalid character in Chunk ID: Character = 0x03
-   Offset: 131085
   MIMEtype: audio/x-wave
   Profile: PCMWAVEFORMAT
   WAVEMetadata: 
@@ -245,11 +91,11 @@ Jhove (Rel. 1.14.6, 2016-05-12)
     Format: WAVE
     AudioDataEncoding: PCM audio in integer format
     ByteOrder: LITTLE_ENDIAN
-    FirstSampleOffset: 44
+    FirstSampleOffset: 96
     Use:
      UseType: OTHER
      OtherType: JHOVE_validation
-    PrimaryIdentifier: /home/johan/detectDamgedWAVs/data/frogs-01-last-byte-missing.wav
+    PrimaryIdentifier: /home/johan/detectDamagedWAVs/data/frogs-01-byte-missing-at-offset-811537.wav
      IdentifierType: FILE_NAME
     Face: 
      TimeLine: 
@@ -295,5 +141,82 @@ Jhove (Rel. 1.14.6, 2016-05-12)
    CompressionCode: PCM audio in integer format
    AverageBytesPerSecond: 176400
    BlockAlign: 4
+   ListInfo: 
+    Name: untitled
+    Software: Lavf57.56.100
+   Data: 
+    DataLength: 2050944
+Jhove (Rel. 1.14.6, 2016-05-12)
+ Date: 2017-01-02 18:30:09 CET
+ RepresentationInformation: /home/johan/detectDamagedWAVs/data/frogs-01-last-byte-missing.wav
+  ReportingModule: WAVE-hul, Rel. 1.3 (2007-12-14)
+  LastModified: 2017-01-02 18:28:04 CET
+  Size: 2051039
+  Format: WAVE
+  Status: Well-Formed and valid
+  SignatureMatches:
+   WAVE-hul
+  MIMEtype: audio/x-wave
+  Profile: PCMWAVEFORMAT
+  WAVEMetadata: 
+   AESAudioMetadata: 
+    AnalogDigitalFlag: FILE_DIGITAL
+    SchemaVersion: 1.02b
+    Format: WAVE
+    AudioDataEncoding: PCM audio in integer format
+    ByteOrder: LITTLE_ENDIAN
+    FirstSampleOffset: 96
+    Use:
+     UseType: OTHER
+     OtherType: JHOVE_validation
+    PrimaryIdentifier: /home/johan/detectDamagedWAVs/data/frogs-01-last-byte-missing.wav
+     IdentifierType: FILE_NAME
+    Face: 
+     TimeLine: 
+      StartTime:
+       FrameCount: 30
+       TimeBase: 1000
+       VideoField: FIELD_1
+       CountingMode: NTSC_NON_DROP_FRAME
+       Hours: 0
+       Minutes: 0
+       Seconds: 0
+       Frames: 0
+       Samples: 
+        SampleRate: S44100
+        NumberOfSamples: 0
+       FilmFraming: NOT_APPLICABLE
+        Type: ntscFilmFramingType
+      Duration:
+       FrameCount: 30
+       TimeBase: 1000
+       VideoField: FIELD_1
+       CountingMode: NTSC_NON_DROP_FRAME
+       Hours: 0
+       Minutes: 0
+       Seconds: 11
+       Frames: 18
+       Samples: 
+        SampleRate: S44100
+        NumberOfSamples: 1176
+       FilmFraming: NOT_APPLICABLE
+        Type: ntscFilmFramingType
+      NumChannels: 2
+      Stream:
+       ChannelNum: 0
+       ChannelAssignment: LEFT
+      Stream:
+       ChannelNum: 1
+       ChannelAssignment: RIGHT
+    FormatList:
+     FormatRegion:
+      BitDepth: 16
+      SampleRate: 44100.0
+   CompressionCode: PCM audio in integer format
+   AverageBytesPerSecond: 176400
+   BlockAlign: 4
+   ListInfo: 
+    Name: untitled
+    Software: Lavf57.56.100
    Data: 
     DataLength: 2050944
