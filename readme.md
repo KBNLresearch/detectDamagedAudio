@@ -23,11 +23,10 @@ Determine what is the best software tool for detecting damaged/incomplete/trunca
 
 * [jhove](http://jhove.openpreservation.org/), version 1.14.6, 2016-05-12
 * [shntool](http://www.etree.org/shnutils/shntool/), version 3.0.7
-* [ffprobe](https://ffmpeg.org/ffprobe.html) (part of [ffmpeg](https://ffmpeg.org/), version 3.3.2
+* [ffmpeg](https://ffmpeg.org/), version 3.2.2
 * [mediainfo](https://mediaarea.net/en/MediaInfo), version v0.7.81
 * [flac](https://xiph.org/flac/), version 1.3.0
 
-Note: *ffprobe* and *mediainfo* are primarily tools for extracting technical information. They are not designed to detect defective files.
 
 ## Tests
 

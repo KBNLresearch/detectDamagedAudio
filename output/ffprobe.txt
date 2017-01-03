@@ -1,57 +1,4 @@
-/home/johan/detectDamagedAudio/data//error.log
-[STREAM]
-index=0
-codec_name=text
-codec_long_name=raw UTF-8 text
-profile=unknown
-codec_type=subtitle
-codec_time_base=0/1
-codec_tag_string=[0][0][0][0]
-codec_tag=0x0000
-width=N/A
-height=N/A
-id=N/A
-r_frame_rate=0/0
-avg_frame_rate=0/0
-time_base=1/1000
-start_pts=N/A
-start_time=N/A
-duration_ts=N/A
-duration=N/A
-bit_rate=N/A
-max_bit_rate=N/A
-bits_per_raw_sample=N/A
-nb_frames=N/A
-nb_read_frames=N/A
-nb_read_packets=N/A
-DISPOSITION:default=0
-DISPOSITION:dub=0
-DISPOSITION:original=0
-DISPOSITION:comment=0
-DISPOSITION:lyrics=0
-DISPOSITION:karaoke=0
-DISPOSITION:forced=0
-DISPOSITION:hearing_impaired=0
-DISPOSITION:visual_impaired=0
-DISPOSITION:clean_effects=0
-DISPOSITION:attached_pic=0
-DISPOSITION:timed_thumbnails=0
-[/STREAM]
-[FORMAT]
-filename=/home/johan/detectDamagedAudio/data//error.log
-nb_streams=1
-nb_programs=0
-format_name=lrc
-format_long_name=LRC lyrics
-start_time=N/A
-duration=N/A
-size=106
-bit_rate=N/A
-probe_score=5
-TAG:flac @ 0x228e860= 1
-
-[/FORMAT]
-/home/johan/detectDamagedAudio/data//frogs-01-byte-missing-at-offset-651202.flac
+###  /home/johan/detectDamagedAudio/data/frogs-01-byte-missing-at-offset-651202.flac
 [STREAM]
 index=0
 codec_name=flac
@@ -94,7 +41,7 @@ DISPOSITION:attached_pic=0
 DISPOSITION:timed_thumbnails=0
 [/STREAM]
 [FORMAT]
-filename=/home/johan/detectDamagedAudio/data//frogs-01-byte-missing-at-offset-651202.flac
+filename=/home/johan/detectDamagedAudio/data/frogs-01-byte-missing-at-offset-651202.flac
 nb_streams=1
 nb_programs=0
 format_name=flac
@@ -105,7 +52,7 @@ size=1085334
 bit_rate=746789
 probe_score=50
 [/FORMAT]
-/home/johan/detectDamagedAudio/data//frogs-01-byte-missing-at-offset-811537.wav
+###  /home/johan/detectDamagedAudio/data/frogs-01-byte-missing-at-offset-811537.wav
 [STREAM]
 index=0
 codec_name=pcm_s16le
@@ -148,7 +95,7 @@ DISPOSITION:attached_pic=0
 DISPOSITION:timed_thumbnails=0
 [/STREAM]
 [FORMAT]
-filename=/home/johan/detectDamagedAudio/data//frogs-01-byte-missing-at-offset-811537.wav
+filename=/home/johan/detectDamagedAudio/data/frogs-01-byte-missing-at-offset-811537.wav
 nb_streams=1
 nb_programs=0
 format_name=wav
@@ -161,7 +108,7 @@ probe_score=99
 TAG:title=untitled
 TAG:encoder=Lavf57.56.100
 [/FORMAT]
-/home/johan/detectDamagedAudio/data//frogs-01.flac
+###  /home/johan/detectDamagedAudio/data/frogs-01.flac
 [STREAM]
 index=0
 codec_name=flac
@@ -204,7 +151,7 @@ DISPOSITION:attached_pic=0
 DISPOSITION:timed_thumbnails=0
 [/STREAM]
 [FORMAT]
-filename=/home/johan/detectDamagedAudio/data//frogs-01.flac
+filename=/home/johan/detectDamagedAudio/data/frogs-01.flac
 nb_streams=1
 nb_programs=0
 format_name=flac
@@ -215,7 +162,7 @@ size=1085335
 bit_rate=746790
 probe_score=50
 [/FORMAT]
-/home/johan/detectDamagedAudio/data//frogs-01-last-1000-bytes-missing.flac
+###  /home/johan/detectDamagedAudio/data/frogs-01-last-1000-bytes-missing.flac
 [STREAM]
 index=0
 codec_name=flac
@@ -258,7 +205,7 @@ DISPOSITION:attached_pic=0
 DISPOSITION:timed_thumbnails=0
 [/STREAM]
 [FORMAT]
-filename=/home/johan/detectDamagedAudio/data//frogs-01-last-1000-bytes-missing.flac
+filename=/home/johan/detectDamagedAudio/data/frogs-01-last-1000-bytes-missing.flac
 nb_streams=1
 nb_programs=0
 format_name=flac
@@ -269,7 +216,7 @@ size=1084335
 bit_rate=746102
 probe_score=50
 [/FORMAT]
-/home/johan/detectDamagedAudio/data//frogs-01-last-2032-bytes-missing.wav
+###  /home/johan/detectDamagedAudio/data/frogs-01-last-2032-bytes-missing.wav
 [STREAM]
 index=0
 codec_name=pcm_s16le
@@ -312,7 +259,7 @@ DISPOSITION:attached_pic=0
 DISPOSITION:timed_thumbnails=0
 [/STREAM]
 [FORMAT]
-filename=/home/johan/detectDamagedAudio/data//frogs-01-last-2032-bytes-missing.wav
+filename=/home/johan/detectDamagedAudio/data/frogs-01-last-2032-bytes-missing.wav
 nb_streams=1
 nb_programs=0
 format_name=wav
@@ -325,7 +272,7 @@ probe_score=99
 TAG:title=untitled
 TAG:encoder=Lavf57.56.100
 [/FORMAT]
-/home/johan/detectDamagedAudio/data//frogs-01-last-byte-missing.flac
+###  /home/johan/detectDamagedAudio/data/frogs-01-last-byte-missing.flac
 [STREAM]
 index=0
 codec_name=flac
@@ -368,7 +315,7 @@ DISPOSITION:attached_pic=0
 DISPOSITION:timed_thumbnails=0
 [/STREAM]
 [FORMAT]
-filename=/home/johan/detectDamagedAudio/data//frogs-01-last-byte-missing.flac
+filename=/home/johan/detectDamagedAudio/data/frogs-01-last-byte-missing.flac
 nb_streams=1
 nb_programs=0
 format_name=flac
@@ -379,7 +326,7 @@ size=1085334
 bit_rate=746789
 probe_score=50
 [/FORMAT]
-/home/johan/detectDamagedAudio/data//frogs-01-last-byte-missing.wav
+###  /home/johan/detectDamagedAudio/data/frogs-01-last-byte-missing.wav
 [STREAM]
 index=0
 codec_name=pcm_s16le
@@ -422,7 +369,7 @@ DISPOSITION:attached_pic=0
 DISPOSITION:timed_thumbnails=0
 [/STREAM]
 [FORMAT]
-filename=/home/johan/detectDamagedAudio/data//frogs-01-last-byte-missing.wav
+filename=/home/johan/detectDamagedAudio/data/frogs-01-last-byte-missing.wav
 nb_streams=1
 nb_programs=0
 format_name=wav
@@ -435,7 +382,7 @@ probe_score=99
 TAG:title=untitled
 TAG:encoder=Lavf57.56.100
 [/FORMAT]
-/home/johan/detectDamagedAudio/data//frogs-01.wav
+###  /home/johan/detectDamagedAudio/data/frogs-01.wav
 [STREAM]
 index=0
 codec_name=pcm_s16le
@@ -478,7 +425,7 @@ DISPOSITION:attached_pic=0
 DISPOSITION:timed_thumbnails=0
 [/STREAM]
 [FORMAT]
-filename=/home/johan/detectDamagedAudio/data//frogs-01.wav
+filename=/home/johan/detectDamagedAudio/data/frogs-01.wav
 nb_streams=1
 nb_programs=0
 format_name=wav

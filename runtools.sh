@@ -10,7 +10,7 @@ instDir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 echo $instDir
 
 # Data directory - where files are stored
-dataDir="$instDir"/data/
+dataDir="$instDir"/data
 
 # Output directory - tool output goes here
 outDir="$instDir"/output
@@ -19,7 +19,6 @@ outDir="$instDir"/output
 outJhoveDefault=$outDir/jhoveDefault.txt
 outJhoveWave=$outDir/jhoveWave.txt
 outShntool=$outDir/shntool.txt
-outFfprobe=$outDir/ffprobe.txt
 outFfmpeg=$outDir/ffmpeg.txt
 outMediainfo=$outDir/mediainfo.txt
 outFlac=$outDir/flac.txt
@@ -29,19 +28,17 @@ rm "$outDir"/*
 
 for inputFile in $dataDir/*; do
 
-    echo $inputFile >> $outJhoveDefault
-    #$jhove $inputFile >> $outJhoveDefault
-    echo $inputFile >> $outJhoveWave
-    #$jhove -m WAVE-hul $inputFile >> $outJhoveWave
-    echo $inputFile >> $outShntool
-    #shntool info $inputFile >> $outShntool
-    echo $inputFile >> $outFfmpeg
+    echo '### '$inputFile >> $outJhoveDefault
+    $jhove $inputFile >> $outJhoveDefault
+    echo '### ' $inputFile >> $outJhoveWave
+    $jhove -m WAVE-hul $inputFile >> $outJhoveWave
+    echo '### ' $inputFile >> $outShntool
+    shntool info $inputFile >> $outShntool
+    echo '### ' $inputFile >> $outFfmpeg
     ffmpeg -v error -i $inputFile -f null - 2>> $outFfmpeg 
-    echo $inputFile >> $outFfprobe
-    ffprobe $inputFile -show_format -show_streams >> $outFfprobe
-    echo $inputFile >> $outMediainfo
-    #mediainfo $inputFile -show_format -show_streams >> $outMediainfo
-    echo $inputFile >> $outFlac
-    #flac -t $inputFile 2>> $outFlac
+    echo '### ' $inputFile >> $outMediainfo
+    mediainfo $inputFile -show_format -show_streams >> $outMediainfo
+    echo '### ' $inputFile >> $outFlac
+    flac -t $inputFile 2>> $outFlac
 done
 

@@ -1,9 +1,94 @@
-/home/johan/detectDamagedAudio/data//error.log
-/home/johan/detectDamagedAudio/data//frogs-01-byte-missing-at-offset-651202.flac
-/home/johan/detectDamagedAudio/data//frogs-01-byte-missing-at-offset-811537.wav
-/home/johan/detectDamagedAudio/data//frogs-01.flac
-/home/johan/detectDamagedAudio/data//frogs-01-last-1000-bytes-missing.flac
-/home/johan/detectDamagedAudio/data//frogs-01-last-2032-bytes-missing.wav
-/home/johan/detectDamagedAudio/data//frogs-01-last-byte-missing.flac
-/home/johan/detectDamagedAudio/data//frogs-01-last-byte-missing.wav
-/home/johan/detectDamagedAudio/data//frogs-01.wav
+###  /home/johan/detectDamagedAudio/data/frogs-01-byte-missing-at-offset-651202.flac
+
+flac 1.3.0, Copyright (C) 2000-2009, 2011-2013  Josh Coalson & Xiph.Org Foundation
+flac comes with ABSOLUTELY NO WARRANTY.  This is free software, and you are
+welcome to redistribute it under certain conditions.  Type `flac' for details.
+
+frogs-01-byte-missing-at-offset-651202.flac: testing, 51% complete*** Got error code 2:FLAC__STREAM_DECODER_ERROR_STATUS_FRAME_CRC_MISMATCH
+
+
+frogs-01-byte-missing-at-offset-651202.flac: ERROR while decoding data
+                                             state = FLAC__STREAM_DECODER_READ_FRAME
+###  /home/johan/detectDamagedAudio/data/frogs-01-byte-missing-at-offset-811537.wav
+
+flac 1.3.0, Copyright (C) 2000-2009, 2011-2013  Josh Coalson & Xiph.Org Foundation
+flac comes with ABSOLUTELY NO WARRANTY.  This is free software, and you are
+welcome to redistribute it under certain conditions.  Type `flac' for details.
+
+frogs-01-byte-missing-at-offset-811537.wav: *** Got error code 0:FLAC__STREAM_DECODER_ERROR_STATUS_LOST_SYNC
+
+The input file is either not a FLAC file or is corrupted.  If you are
+convinced it is a FLAC file, you can rerun the same command and add the
+-F parameter to try and recover as much as possible from the file.
+*** Got error code 0:FLAC__STREAM_DECODER_ERROR_STATUS_LOST_SYNC
+*** Got error code 0:FLAC__STREAM_DECODER_ERROR_STATUS_LOST_SYNC
+*** Got error code 0:FLAC__STREAM_DECODER_ERROR_STATUS_LOST_SYNC
+###  /home/johan/detectDamagedAudio/data/frogs-01.flac
+
+flac 1.3.0, Copyright (C) 2000-2009, 2011-2013  Josh Coalson & Xiph.Org Foundation
+flac comes with ABSOLUTELY NO WARRANTY.  This is free software, and you are
+welcome to redistribute it under certain conditions.  Type `flac' for details.
+
+frogs-01.flac: testing, 51% completeok                    
+###  /home/johan/detectDamagedAudio/data/frogs-01-last-1000-bytes-missing.flac
+
+flac 1.3.0, Copyright (C) 2000-2009, 2011-2013  Josh Coalson & Xiph.Org Foundation
+flac comes with ABSOLUTELY NO WARRANTY.  This is free software, and you are
+welcome to redistribute it under certain conditions.  Type `flac' for details.
+
+frogs-01-last-1000-bytes-missing.flac: testing, 51% complete
+
+frogs-01-last-1000-bytes-missing.flac: ERROR while decoding data
+                                       state = FLAC__STREAM_DECODER_END_OF_STREAM
+###  /home/johan/detectDamagedAudio/data/frogs-01-last-2032-bytes-missing.wav
+
+flac 1.3.0, Copyright (C) 2000-2009, 2011-2013  Josh Coalson & Xiph.Org Foundation
+flac comes with ABSOLUTELY NO WARRANTY.  This is free software, and you are
+welcome to redistribute it under certain conditions.  Type `flac' for details.
+
+frogs-01-last-2032-bytes-missing.wav: *** Got error code 0:FLAC__STREAM_DECODER_ERROR_STATUS_LOST_SYNC
+
+The input file is either not a FLAC file or is corrupted.  If you are
+convinced it is a FLAC file, you can rerun the same command and add the
+-F parameter to try and recover as much as possible from the file.
+*** Got error code 0:FLAC__STREAM_DECODER_ERROR_STATUS_LOST_SYNC
+*** Got error code 0:FLAC__STREAM_DECODER_ERROR_STATUS_LOST_SYNC
+*** Got error code 0:FLAC__STREAM_DECODER_ERROR_STATUS_LOST_SYNC
+###  /home/johan/detectDamagedAudio/data/frogs-01-last-byte-missing.flac
+
+flac 1.3.0, Copyright (C) 2000-2009, 2011-2013  Josh Coalson & Xiph.Org Foundation
+flac comes with ABSOLUTELY NO WARRANTY.  This is free software, and you are
+welcome to redistribute it under certain conditions.  Type `flac' for details.
+
+frogs-01-last-byte-missing.flac: testing, 51% complete
+
+frogs-01-last-byte-missing.flac: ERROR while decoding data
+                                 state = FLAC__STREAM_DECODER_END_OF_STREAM
+###  /home/johan/detectDamagedAudio/data/frogs-01-last-byte-missing.wav
+
+flac 1.3.0, Copyright (C) 2000-2009, 2011-2013  Josh Coalson & Xiph.Org Foundation
+flac comes with ABSOLUTELY NO WARRANTY.  This is free software, and you are
+welcome to redistribute it under certain conditions.  Type `flac' for details.
+
+frogs-01-last-byte-missing.wav: *** Got error code 0:FLAC__STREAM_DECODER_ERROR_STATUS_LOST_SYNC
+
+The input file is either not a FLAC file or is corrupted.  If you are
+convinced it is a FLAC file, you can rerun the same command and add the
+-F parameter to try and recover as much as possible from the file.
+*** Got error code 0:FLAC__STREAM_DECODER_ERROR_STATUS_LOST_SYNC
+*** Got error code 0:FLAC__STREAM_DECODER_ERROR_STATUS_LOST_SYNC
+*** Got error code 0:FLAC__STREAM_DECODER_ERROR_STATUS_LOST_SYNC
+###  /home/johan/detectDamagedAudio/data/frogs-01.wav
+
+flac 1.3.0, Copyright (C) 2000-2009, 2011-2013  Josh Coalson & Xiph.Org Foundation
+flac comes with ABSOLUTELY NO WARRANTY.  This is free software, and you are
+welcome to redistribute it under certain conditions.  Type `flac' for details.
+
+frogs-01.wav: *** Got error code 0:FLAC__STREAM_DECODER_ERROR_STATUS_LOST_SYNC
+
+The input file is either not a FLAC file or is corrupted.  If you are
+convinced it is a FLAC file, you can rerun the same command and add the
+-F parameter to try and recover as much as possible from the file.
+*** Got error code 0:FLAC__STREAM_DECODER_ERROR_STATUS_LOST_SYNC
+*** Got error code 0:FLAC__STREAM_DECODER_ERROR_STATUS_LOST_SYNC
+*** Got error code 0:FLAC__STREAM_DECODER_ERROR_STATUS_LOST_SYNC
