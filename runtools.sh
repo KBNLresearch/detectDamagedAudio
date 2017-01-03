@@ -7,24 +7,41 @@ jhove=~/jhove/jhove
 # Installation directory
 instDir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
+echo $instDir
+
 # Data directory - where files are stored
 dataDir="$instDir"/data/
 
 # Output directory - tool output goes here
 outDir="$instDir"/output
 
-# Remove any old instances of output files
+# Output files for all tools
+outJhoveDefault=$outDir/jhoveDefault.txt
+outJhoveWave=$outDir/jhoveWave.txt
+outShntool=$outDir/shntool.txt
+outFfprobe=$outDir/ffprobe.txt
+outFfmpeg=$outDir/ffmpeg.txt
+outMediainfo=$outDir/mediainfo.txt
+outFlac=$outDir/flac.txt
 
+# Remove any old instances of output files
 rm "$outDir"/*
 
-while IFS= read -d $'\0' inputFile ; do
+for inputFile in $dataDir/*; do
 
-    echo $inputFile
-    $jhove $inputFile >> $outDir/jhoveDefault.txt
-    $jhove -m WAVE-hul $inputFile >> $outDir/jhoveWave.txt
-    shntool info $inputFile >> $outDir/shntool.txt
-    ffprobe $inputFile -show_format -show_streams >> $outDir/ffprobe.txt
-    mediainfo $inputFile -show_format -show_streams >> $outDir/mediainfo.txt
-    flac -t $inputFile >> $outDir/flac.txt
+    echo $inputFile >> $outJhoveDefault
+    #$jhove $inputFile >> $outJhoveDefault
+    echo $inputFile >> $outJhoveWave
+    #$jhove -m WAVE-hul $inputFile >> $outJhoveWave
+    echo $inputFile >> $outShntool
+    #shntool info $inputFile >> $outShntool
+    echo $inputFile >> $outFfmpeg
+    ffmpeg -v error -i $inputFile -f null - 2>> $outFfmpeg 
+    echo $inputFile >> $outFfprobe
+    ffprobe $inputFile -show_format -show_streams >> $outFfprobe
+    echo $inputFile >> $outMediainfo
+    #mediainfo $inputFile -show_format -show_streams >> $outMediainfo
+    echo $inputFile >> $outFlac
+    #flac -t $inputFile 2>> $outFlac
+done
 
-done < <(find "$dataDir" -maxdepth 1 -mindepth 1 -print0 -type f)
