@@ -1,7 +1,17 @@
 
 ## Purpose of this repo
 
-Determine what is the best software tool for detecting damaged/incomplete/truncated WAVE and FLAC audio files.
+Determine what is the best software tool for detecting damaged/incomplete/truncated WAVE and FLAC audio files using the following candidate tools:
+
+* [jhove](http://jhove.openpreservation.org/), version 1.14.6, 2016-05-12
+* [shntool](http://www.etree.org/shnutils/shntool/), version 3.0.7
+* [ffmpeg](https://ffmpeg.org/), version 3.2.2
+* [mediainfo](https://mediaarea.net/en/MediaInfo), version v0.7.81
+* [flac](https://xiph.org/flac/), version 1.3.0
+
+Full analysis here:
+
+[Breaking WAVEs (and some FLACs)](http://blog.kbresearch.nl/2017/01/04/breaking-waves-and-some-flacs/)
 
 ## Data
 
@@ -19,14 +29,15 @@ Determine what is the best software tool for detecting damaged/incomplete/trunca
 * [frogs-01-last-1000-bytes-missing.flac](./data/frogs-01-last-1000-bytes-missing.flac) - last 1000 bytes are missing
 * [frogs-01-byte-missing-at-offset-651202.flac](./data/frogs-01-byte-missing-at-offset-651202.flac) - byte missing at offset 651202
 
-## Tools
+## Scripts
 
-* [jhove](http://jhove.openpreservation.org/), version 1.14.6, 2016-05-12
-* [shntool](http://www.etree.org/shnutils/shntool/), version 3.0.7
-* [ffmpeg](https://ffmpeg.org/), version 3.2.2
-* [mediainfo](https://mediaarea.net/en/MediaInfo), version v0.7.81
-* [flac](https://xiph.org/flac/), version 1.3.0
+* [runtoolsWAV.sh](./runtoolsWAV.sh) - WAVE analysis script
+* [runtoolsFLAC.sh](./runtoolsFLAC.sh) - FLAC analysis script
 
+## Tool output
+
+* [outputWAV](./outputWAV) - WAVE output files
+* [outputFLAC](./outputFLAC) - FLAC output files
 
 ## License
 
