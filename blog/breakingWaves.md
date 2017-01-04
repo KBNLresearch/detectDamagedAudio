@@ -178,7 +178,7 @@ All example files, scripts and raw tool output are available here:
 <https://github.com/KBNLresearch/detectDamagedAudio>
 
 
-[^1]: On a side note, I noticed that the error stream of the Flac tool sometimes contained a sequence of 21 non-printable '0x08' (backspace0 characters. This is probably a bug. 
+[^1]: On a side note, I noticed that the error stream of the Flac tool sometimes contained a sequence of 21 non-printable '0x08' (backspace) characters. This is probably a bug. 
 [^2]: Also, [this thread on *superuser.com*](http://superuser.com/a/100290/681049) recommends Ffmpeg for checking the integrity of video files.  
 
 
