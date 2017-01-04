@@ -28,3 +28,8 @@ Determine what is the best software tool for detecting damaged/incomplete/trunca
 * [flac](https://xiph.org/flac/), version 1.3.0
 
 
+## License
+
+All data and scripts in this repo released under the [CC-BY](https://creativecommons.org/licenses/by/4.0/) license.
+
+
