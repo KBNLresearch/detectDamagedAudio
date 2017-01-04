@@ -1,7 +1,7 @@
 
 ## Purpose of this repo
 
-Determine what is the best software tool for detecting damaged/incomplete/truncated WAVE audio files.
+Determine what is the best software tool for detecting damaged/incomplete/truncated WAVE and FLAC audio files.
 
 ## Data
 
@@ -28,18 +28,3 @@ Determine what is the best software tool for detecting damaged/incomplete/trunca
 * [flac](https://xiph.org/flac/), version 1.3.0
 
 
-## Tests
-
-[This shell script](./runtools.sh) runs the above tools on every file in the *Data* folder. I used the following command line arguments (note that JHOVE is called twice here, using slightly different command line arguments):
-
-    jhove foo.wav
-    jhove -m WAVE-hul foo.wav
-    shntool info foo.wav
-    ffprobe foo.wav -show_format -show_streams
-    mediainfo foo.wav
-    flac -t foo.flac
-
-## Results
-
-Directory [output](./output)
- 

@@ -1,5 +1,5 @@
-<!-- Breaking Waves -->
-<!-- Structure: for clarity start off with WAV; then move to FLAC at the end -->
+<!-- Breaking WAVEs (and FLACs as well) -->
+
 
 At the KB we have a large collection of offline optical media. Most of these are CD-ROMs, but we also have a sizeable proportion of audio CDs. We're currently in the process of designing a workflow for stabilising the contents of these materials using disk imaging. For audio CDs this involves 'ripping' the tracks to audio files. Since the workflow will be automated to a high degree, basic quality checks on the created audio files are needed. In particular, we want to be sure that the created audio files are complete, as it is possible that some hardware failure during the ripping process could result in truncated or otherwise incomplete files.
 
@@ -170,8 +170,6 @@ So, the Flac tool was able to identify all defective files[^1].
 ## Conclusion
 
 Out of the candidate tools considered here, only Shntool was able to identify all damaged *WAVE* files in this experiment. As a result, this (ancient!) tool still appears to be the best choice for detecting damaged *WAVE* files. Surpringly, Jhove was unable to detect *any* of the damaged files at all, and is probably best avoided for this particular purpose. For *FLAC*, both the Flac tool (*FLAC* reference implementation) and Ffmpeg were able to detect all damaged files, and both appear to be suitable tools.
-
-A limitation of this work is that it is only based on a small number of small test files. 
 
 ## Dataset and scripts
 
