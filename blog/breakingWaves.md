@@ -10,11 +10,11 @@ To get a better idea of what software tool(s) are best suitable for this task, I
 
 ## *WAVE* dataset
 
-For the *WAVE* dataset I started out with a [small, intact *WAVE* file](https://github.com/bitsgalore/detectDamagedAudio/blob/master/data/frogs-01.wav). Using a Hex editor I then made the following derivatives of this file:
+For the *WAVE* dataset I started out with a [small, intact *WAVE* file](https://github.com/KBNLresearch/detectDamagedAudio/blob/master/data/frogs-01.wav). Using a Hex editor I then made the following derivatives of this file:
 
-* [frogs-01-last-byte-missing.wav](https://github.com/bitsgalore/detectDamagedAudio/blob/master/data/frogs-01-last-byte-missing.wav) - one byte is missing at the end of the file
-* [frogs-01-last-2032-bytes-missing.wav](https://github.com/bitsgalore/detectDamagedAudio/blob/master/data/frogs-01-last-2032-bytes-missing.wav) - a chunk of  2032 bytes is missing at the end of the file
-* [frogs-01-byte-missing-at-offset-811537.wav](https://github.com/bitsgalore/detectDamagedAudio/blob/master/data/frogs-01-byte-missing-at-offset-811537.wav) - one byte is missing at offset 811537
+* [frogs-01-last-byte-missing.wav](https://github.com/KBNLresearch/detectDamagedAudio/blob/master/data/frogs-01-last-byte-missing.wav) - one byte is missing at the end of the file
+* [frogs-01-last-2032-bytes-missing.wav](https://github.com/KBNLresearch/detectDamagedAudio/blob/master/data/frogs-01-last-2032-bytes-missing.wav) - a chunk of  2032 bytes is missing at the end of the file
+* [frogs-01-byte-missing-at-offset-811537.wav](https://github.com/KBNLresearch/detectDamagedAudio/blob/master/data/frogs-01-byte-missing-at-offset-811537.wav) - one byte is missing at offset 811537
 
 ## Candidate tools, *WAVE*
 
@@ -37,11 +37,11 @@ I ran the tools with the following command-line arguments (replacing "foo.wav" w
 ### Mediainfo
     mediainfo foo.wav
 
-I automated this using a simple [shell script](https://github.com/bitsgalore/detectDamagedAudio/blob/master/runtoolsWAV.sh) that runs each tool on all files, and then writes the output to a set of text files.
+I automated this using a simple [shell script](https://github.com/KBNLresearch/detectDamagedAudio/blob/master/runtoolsWAV.sh) that runs each tool on all files, and then writes the output to a set of text files.
 
 ## Results, *WAVE*
 
-The full output results of each tool can be found [here](https://github.com/bitsgalore/detectDamagedAudio/tree/master/outputWAV). 
+The full output results of each tool can be found [here](https://github.com/KBNLresearch/detectDamagedAudio/tree/master/outputWAV). 
 
 ### Jhove
 
@@ -99,11 +99,11 @@ confirm that Mediainfo cannot be used for detecting broken *WAVE* files.
 
 ## *FLAC* dataset
 
-Analogous to the *WAVE* dataset, I started out with a [small, intact *FLAC* file](https://github.com/bitsgalore/detectDamagedAudio/blob/master/data/frogs-01.flac), which I then butchered into the following derivative files:
+Analogous to the *WAVE* dataset, I started out with a [small, intact *FLAC* file](https://github.com/KBNLresearch/detectDamagedAudio/blob/master/data/frogs-01.flac), which I then butchered into the following derivative files:
 
-* [frogs-01-last-byte-missing.flac](https://github.com/bitsgalore/detectDamagedAudio/blob/master/data/frogs-01-last-byte-missing.flac) - one byte is missing at the end of the file
-* [frogs-01-last-1000-bytes-missing.flac](https://github.com/bitsgalore/detectDamagedAudio/blob/master/data/frogs-01-last-1000-bytes-missing.flac) - a chunk of  1000 bytes is missing at the end of the file
-* [frogs-01-byte-missing-at-offset-651202.flac](https://github.com/bitsgalore/detectDamagedAudio/blob/master/data/frogs-01-byte-missing-at-offset-651202.flac) - one byte is missing at offset 651202
+* [frogs-01-last-byte-missing.flac](https://github.com/KBNLresearch/detectDamagedAudio/blob/master/data/frogs-01-last-byte-missing.flac) - one byte is missing at the end of the file
+* [frogs-01-last-1000-bytes-missing.flac](https://github.com/KBNLresearch/detectDamagedAudio/blob/master/data/frogs-01-last-1000-bytes-missing.flac) - a chunk of  1000 bytes is missing at the end of the file
+* [frogs-01-byte-missing-at-offset-651202.flac](https://github.com/KBNLresearch/detectDamagedAudio/blob/master/data/frogs-01-byte-missing-at-offset-651202.flac) - one byte is missing at offset 651202
 
 ## Candidate tools, *FLAC*
 
@@ -122,7 +122,7 @@ This decodes a *FLAC* without writing the decoded data to a file. Any errors dur
 
 ## Results, *FLAC*
 
-The full output results of each tool can be found [here](https://github.com/bitsgalore/detectDamagedAudio/tree/master/outputFLAC). 
+The full output results of each tool can be found [here](https://github.com/KBNLresearch/detectDamagedAudio/tree/master/outputFLAC). 
 
 ### Shntool
 
@@ -175,7 +175,7 @@ Out of the candidate tools considered here, only Shntool was able to identify al
 
 All example files, scripts and raw tool output are available here:
 
-<https://github.com/bitsgalore/detectDamagedAudio>
+<https://github.com/KBNLresearch/detectDamagedAudio>
 
 
 [^1]: On a side note, I noticed that the error stream of the Flac tool sometimes contained a sequence of 21 non-printable '0x08' (backspace0 characters. This is probably a bug. 
