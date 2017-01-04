@@ -1,0 +1,8 @@
+###  /home/johan/detectDamagedAudio/data/frogs-01-byte-missing-at-offset-811537.wav
+[pcm_s16le @ 0x3c403a0] Invalid PCM packet, data has size 3 but at least a size of 4 was expected
+Error while decoding stream #0:0: Invalid data found when processing input
+###  /home/johan/detectDamagedAudio/data/frogs-01-last-2032-bytes-missing.wav
+###  /home/johan/detectDamagedAudio/data/frogs-01-last-byte-missing.wav
+[pcm_s16le @ 0x2224380] Invalid PCM packet, data has size 3 but at least a size of 4 was expected
+Error while decoding stream #0:0: Invalid data found when processing input
+###  /home/johan/detectDamagedAudio/data/frogs-01.wav

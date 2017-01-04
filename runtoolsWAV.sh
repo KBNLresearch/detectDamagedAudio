@@ -13,23 +13,20 @@ echo $instDir
 dataDir="$instDir"/data
 
 # Output directory - tool output goes here
-outDir="$instDir"/output
+outDir="$instDir"/outputWAV
 
 # Output files for all tools
-outJhoveDefault=$outDir/jhoveDefault.txt
 outJhoveWave=$outDir/jhoveWave.txt
 outShntool=$outDir/shntool.txt
 outFfmpeg=$outDir/ffmpeg.txt
 outMediainfo=$outDir/mediainfo.txt
-outFlac=$outDir/flac.txt
+#outFlac=$outDir/flac.txt
 
 # Remove any old instances of output files
 rm "$outDir"/*
 
-for inputFile in $dataDir/*; do
+for inputFile in $dataDir/*.wav; do
 
-    echo '### '$inputFile >> $outJhoveDefault
-    $jhove $inputFile >> $outJhoveDefault
     echo '### ' $inputFile >> $outJhoveWave
     $jhove -m WAVE-hul $inputFile >> $outJhoveWave
     echo '### ' $inputFile >> $outShntool
@@ -38,7 +35,7 @@ for inputFile in $dataDir/*; do
     ffmpeg -v error -i $inputFile -f null - 2>> $outFfmpeg 
     echo '### ' $inputFile >> $outMediainfo
     mediainfo $inputFile -show_format -show_streams >> $outMediainfo
-    echo '### ' $inputFile >> $outFlac
-    flac -t $inputFile 2>> $outFlac
+    #echo '### ' $inputFile >> $outFlac
+    #flac -t $inputFile 2>> $outFlac
 done
 

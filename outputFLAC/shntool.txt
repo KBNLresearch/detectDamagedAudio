@@ -1,0 +1,136 @@
+###  /home/johan/detectDamagedAudio/data/frogs-01-byte-missing-at-offset-651202.flac
+-------------------------------------------------------------------------------
+File name:                    /home/johan/detectDamagedAudio/data/frogs-01-byte-missing-at-offset-651202.flac
+Handled by:                   flac format module
+Length:                       0:11.47
+WAVE format:                  0x0001 (Microsoft PCM)
+Channels:                     2
+Bits/sample:                  16
+Samples/sec:                  44100
+Average bytes/sec:            176400
+Rate (calculated):            176400
+Block align:                  4
+Header size:                  44 bytes
+Data size:                    2050944 bytes
+Chunk size:                   2050980 bytes
+Total size (chunk size + 8):  2050988 bytes
+Actual file size:             1085334
+File is compressed:           yes
+Compression ratio:            0.5292
+CD-quality properties:
+  CD quality:                 yes
+  Cut on sector boundary:     yes
+  Sector misalignment:        0 bytes
+  Long enough to be burned:   yes
+WAVE properties:
+  Non-canonical header:       no
+  Extra RIFF chunks:          no
+Possible problems:
+  File contains ID3v2 tag:    no
+  Data chunk block-aligned:   yes
+  Inconsistent header:        no
+  File probably truncated:    unknown
+  Junk appended to file:      unknown
+  Odd data size has pad byte: n/a
+###  /home/johan/detectDamagedAudio/data/frogs-01.flac
+-------------------------------------------------------------------------------
+File name:                    /home/johan/detectDamagedAudio/data/frogs-01.flac
+Handled by:                   flac format module
+Length:                       0:11.47
+WAVE format:                  0x0001 (Microsoft PCM)
+Channels:                     2
+Bits/sample:                  16
+Samples/sec:                  44100
+Average bytes/sec:            176400
+Rate (calculated):            176400
+Block align:                  4
+Header size:                  44 bytes
+Data size:                    2050944 bytes
+Chunk size:                   2050980 bytes
+Total size (chunk size + 8):  2050988 bytes
+Actual file size:             1085335
+File is compressed:           yes
+Compression ratio:            0.5292
+CD-quality properties:
+  CD quality:                 yes
+  Cut on sector boundary:     yes
+  Sector misalignment:        0 bytes
+  Long enough to be burned:   yes
+WAVE properties:
+  Non-canonical header:       no
+  Extra RIFF chunks:          no
+Possible problems:
+  File contains ID3v2 tag:    no
+  Data chunk block-aligned:   yes
+  Inconsistent header:        no
+  File probably truncated:    unknown
+  Junk appended to file:      unknown
+  Odd data size has pad byte: n/a
+###  /home/johan/detectDamagedAudio/data/frogs-01-last-1000-bytes-missing.flac
+-------------------------------------------------------------------------------
+File name:                    /home/johan/detectDamagedAudio/data/frogs-01-last-1000-bytes-missing.flac
+Handled by:                   flac format module
+Length:                       0:11.47
+WAVE format:                  0x0001 (Microsoft PCM)
+Channels:                     2
+Bits/sample:                  16
+Samples/sec:                  44100
+Average bytes/sec:            176400
+Rate (calculated):            176400
+Block align:                  4
+Header size:                  44 bytes
+Data size:                    2050944 bytes
+Chunk size:                   2050980 bytes
+Total size (chunk size + 8):  2050988 bytes
+Actual file size:             1084335
+File is compressed:           yes
+Compression ratio:            0.5287
+CD-quality properties:
+  CD quality:                 yes
+  Cut on sector boundary:     yes
+  Sector misalignment:        0 bytes
+  Long enough to be burned:   yes
+WAVE properties:
+  Non-canonical header:       no
+  Extra RIFF chunks:          no
+Possible problems:
+  File contains ID3v2 tag:    no
+  Data chunk block-aligned:   yes
+  Inconsistent header:        no
+  File probably truncated:    unknown
+  Junk appended to file:      unknown
+  Odd data size has pad byte: n/a
+###  /home/johan/detectDamagedAudio/data/frogs-01-last-byte-missing.flac
+-------------------------------------------------------------------------------
+File name:                    /home/johan/detectDamagedAudio/data/frogs-01-last-byte-missing.flac
+Handled by:                   flac format module
+Length:                       0:11.47
+WAVE format:                  0x0001 (Microsoft PCM)
+Channels:                     2
+Bits/sample:                  16
+Samples/sec:                  44100
+Average bytes/sec:            176400
+Rate (calculated):            176400
+Block align:                  4
+Header size:                  44 bytes
+Data size:                    2050944 bytes
+Chunk size:                   2050980 bytes
+Total size (chunk size + 8):  2050988 bytes
+Actual file size:             1085334
+File is compressed:           yes
+Compression ratio:            0.5292
+CD-quality properties:
+  CD quality:                 yes
+  Cut on sector boundary:     yes
+  Sector misalignment:        0 bytes
+  Long enough to be burned:   yes
+WAVE properties:
+  Non-canonical header:       no
+  Extra RIFF chunks:          no
+Possible problems:
+  File contains ID3v2 tag:    no
+  Data chunk block-aligned:   yes
+  Inconsistent header:        no
+  File probably truncated:    unknown
+  Junk appended to file:      unknown
+  Odd data size has pad byte: n/a

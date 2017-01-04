@@ -1,0 +1,10 @@
+###  /home/johan/detectDamagedAudio/data/frogs-01-byte-missing-at-offset-651202.flac
+[flac @ 0x279faa0] overread: 1
+Error while decoding stream #0:0: Invalid data found when processing input
+###  /home/johan/detectDamagedAudio/data/frogs-01.flac
+###  /home/johan/detectDamagedAudio/data/frogs-01-last-1000-bytes-missing.flac
+[flac @ 0x3c5d860] overread: 1
+Error while decoding stream #0:0: Invalid data found when processing input
+###  /home/johan/detectDamagedAudio/data/frogs-01-last-byte-missing.flac
+[flac @ 0x294b860] overread: 1
+Error while decoding stream #0:0: Invalid data found when processing input
