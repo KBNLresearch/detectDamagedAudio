@@ -1,0 +1,254 @@
+<!-- Breaking WAVEs (and some FLACs too) -->
+<p>At the KB we have a large collection of offline optical media. Most of these are CD-ROMs, but we also have a sizeable proportion of audio CDs. We're currently in the process of designing a workflow for stabilising the contents of these materials using disk imaging. For audio CDs this involves 'ripping' the tracks to audio files. Since the workflow will be automated to a high degree, basic quality checks on the created audio files are needed. In particular, we want to be sure that the created audio files are complete, as it is possible that some hardware failure during the ripping process could result in truncated or otherwise incomplete files.</p>
+<p>To get a better idea of what software tool(s) are best suitable for this task, I created a small dataset of audio files which I deliberately damaged. I subsequently ran each of these files through a set of candidate tools, and then looked which tools were able to detect the faulty files. The first half of this blog post focuses on the <a href="http://fileformats.archiveteam.org/wiki/WAVE"><em>WAVE</em></a> format; the second half covers the <a href="http://fileformats.archiveteam.org/wiki/FLAC"><em>FLAC</em></a> format (at the moment we haven't decided on which format to use yet).</p>
+<!--more-->
+<h2 id="wave-dataset"><em>WAVE</em> dataset</h2>
+<p>For the <em>WAVE</em> dataset I started out with a <a href="https://github.com/KBNLresearch/detectDamagedAudio/blob/master/data/frogs-01.wav">small, intact <em>WAVE</em> file</a>. Using a Hex editor I then made the following derivatives of this file:</p>
+<ul>
+<li><a href="https://github.com/KBNLresearch/detectDamagedAudio/blob/master/data/frogs-01-last-byte-missing.wav">frogs-01-last-byte-missing.wav</a> - one byte is missing at the end of the file</li>
+<li><a href="https://github.com/KBNLresearch/detectDamagedAudio/blob/master/data/frogs-01-last-2032-bytes-missing.wav">frogs-01-last-2032-bytes-missing.wav</a> - a chunk of 2032 bytes is missing at the end of the file</li>
+<li><a href="https://github.com/KBNLresearch/detectDamagedAudio/blob/master/data/frogs-01-byte-missing-at-offset-811537.wav">frogs-01-byte-missing-at-offset-811537.wav</a> - one byte is missing at offset 811537</li>
+</ul>
+<h2 id="candidate-tools-wave">Candidate tools, <em>WAVE</em></h2>
+<p>The candidate tools I used to analyse the <em>WAVE</em> files are:</p>
+<ul>
+<li><a href="http://jhove.openpreservation.org/"><strong>jhove</strong></a> includes a <a href="http://jhove.openpreservation.org/modules/wave/"><em>WAVE</em> validation module</a>, which makes it an obvious choice. The tested version is 1.14.6, 2016-05-12.</li>
+<li><a href="http://www.etree.org/shnutils/shntool/"><strong>shntool</strong></a> is a &quot;multi-purpose WAVE data processing and reporting utility&quot;. It was first released in 2000. The tested version is 3.0.7.</li>
+<li><a href="https://ffmpeg.org/"><strong>ffmpeg</strong></a> is a popular conversion tool for audio and video formats. The tested version is 3.2.2.</li>
+<li><a href="https://mediaarea.net/en/MediaInfo"><strong>mediainfo</strong></a> is a widely-used feature extraction tool for audiovisual files. The tested version is v0.7.81.</li>
+</ul>
+<p>Note that of the above tools, only Jhove and Shntool are designed to detect problems in <em>WAVE</em> files. Both Ffmpeg and Mediainfo were primarily designed for other purposes (format conversion and technical metadata extraction), and they were <em>not</em> designed to detect defective files! I included these tools here mainly because they are widely used, and I was curious whether they would throw up anything interesting in case of defective files<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a>. I ran the tools with the following command-line arguments (replacing &quot;foo.wav&quot; with the actual file name):</p>
+<h3 id="jhove">Jhove</h3>
+<pre><code>jhove -m WAVE-hul foo.wav</code></pre>
+<h3 id="shntool">Shntool</h3>
+<pre><code>shntool info foo.wav</code></pre>
+<h3 id="ffmpeg">Ffmpeg</h3>
+<pre><code>ffmpeg -v error -i foo.wav -f null -</code></pre>
+<h3 id="mediainfo">Mediainfo</h3>
+<pre><code>mediainfo foo.wav</code></pre>
+<p>I automated this using a simple <a href="https://github.com/KBNLresearch/detectDamagedAudio/blob/master/runtoolsWAV.sh">shell script</a> that runs each tool on all files, and then writes the output to a set of text files.</p>
+<h2 id="results-wave">Results, <em>WAVE</em></h2>
+<p>The full output results of each tool can be found <a href="https://github.com/KBNLresearch/detectDamagedAudio/tree/master/outputWAV">here</a>.</p>
+<h3 id="jhove-1">Jhove</h3>
+<p>The 'Status' field in Jhove's output summarises the validation outcome. Here are the results for each file:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">File</th>
+<th align="left">Result</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">frogs-01.wav</td>
+<td align="left">Status: Well-Formed and valid</td>
+</tr>
+<tr class="even">
+<td align="left">frogs-01-last-byte-missing.wav</td>
+<td align="left">Status: Well-Formed and valid</td>
+</tr>
+<tr class="odd">
+<td align="left">frogs-01-last-2032-bytes-missing.wav</td>
+<td align="left">Status: Well-Formed and valid</td>
+</tr>
+<tr class="even">
+<td align="left">frogs-01-byte-missing-at-offset-811537.wav</td>
+<td align="left">Status: Well-Formed and valid</td>
+</tr>
+</tbody>
+</table>
+<p>So, Jhove was unable to detect <em>any</em> of the damaged files at all!</p>
+<h3 id="shntool-1">Shntool</h3>
+<p>Shntool checks a <em>WAVE</em> on six criteria, which are listed in its output under 'Possible problems':</p>
+<pre><code>Possible problems:
+  File contains ID3v2 tag:    no
+  Data chunk block-aligned:   yes
+  Inconsistent header:        no
+  File probably truncated:    no
+  Junk appended to file:      no
+  Odd data size has pad byte: n/a</code></pre>
+<p>The thing to watch here is the 'File probably truncated' item:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">File</th>
+<th align="left">Result</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">frogs-01.wav</td>
+<td align="left">File probably truncated: no</td>
+</tr>
+<tr class="even">
+<td align="left">frogs-01-last-byte-missing.wav</td>
+<td align="left">File probably truncated: yes (missing 1 byte)</td>
+</tr>
+<tr class="odd">
+<td align="left">frogs-01-last-2032-bytes-missing.wav</td>
+<td align="left">File probably truncated: yes (missing 2032 bytes</td>
+</tr>
+<tr class="even">
+<td align="left">frogs-01-byte-missing-at-offset-811537.wav</td>
+<td align="left">File probably truncated: yes (missing 1 byte)</td>
+</tr>
+</tbody>
+</table>
+<p>So, Shntool was able to detect all damaged files.</p>
+<h3 id="ffmpeg-1">Ffmpeg</h3>
+<p>For our Ffmpeg call we monitor any errors that are sent to the standard error stream. The results:</p>
+<table>
+<colgroup>
+<col />
+<col />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">File</th>
+<th align="left">result</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">frogs-01.wav</td>
+<td align="left">-</td>
+</tr>
+<tr class="even">
+<td align="left">frogs-01-last-byte-missing.wav</td>
+<td align="left">[pcm_s16le @ 0x3545380] Invalid PCM packet, data has size 3 but at least a size of 4 was expected<br>Error while decoding stream #0:0: Invalid data found when processing input</td>
+</tr>
+<tr class="odd">
+<td align="left">frogs-01-last-2032-bytes-missing.wav</td>
+<td align="left">-</td>
+</tr>
+<tr class="even">
+<td align="left">frogs-01-byte-missing-at-offset-811537.wav</td>
+<td align="left">[pcm_s16le @ 0x2768380] Invalid PCM packet, data has size 3 but at least a size of 4 was expected<br>Error while decoding stream #0:0: Invalid data found when processing input</td>
+</tr>
+</tbody>
+</table>
+<p>Interestingly, Ffmpeg reports an error for both files that have 1 byte missing, but it doesn't for the file that has 2023 bytes missing. This suggests that Ffmpeg is <em>not</em> suitable for detecting broken <em>WAVE</em> files.</p>
+<h3 id="mediainfo-1">Mediainfo</h3>
+<p>Mediainfo didn't report errors or warnings for any of these files. This is not surprising, but it does confirm that Mediainfo cannot be used for detecting broken <em>WAVE</em> files.</p>
+<h2 id="flac-dataset"><em>FLAC</em> dataset</h2>
+<p>Analogous to the <em>WAVE</em> dataset, I started out with a <a href="https://github.com/KBNLresearch/detectDamagedAudio/blob/master/data/frogs-01.flac">small, intact <em>FLAC</em> file</a>, which I then butchered into the following derivative files:</p>
+<ul>
+<li><a href="https://github.com/KBNLresearch/detectDamagedAudio/blob/master/data/frogs-01-last-byte-missing.flac">frogs-01-last-byte-missing.flac</a> - one byte is missing at the end of the file</li>
+<li><a href="https://github.com/KBNLresearch/detectDamagedAudio/blob/master/data/frogs-01-last-1000-bytes-missing.flac">frogs-01-last-1000-bytes-missing.flac</a> - a chunk of 1000 bytes is missing at the end of the file</li>
+<li><a href="https://github.com/KBNLresearch/detectDamagedAudio/blob/master/data/frogs-01-byte-missing-at-offset-651202.flac">frogs-01-byte-missing-at-offset-651202.flac</a> - one byte is missing at offset 651202</li>
+</ul>
+<h2 id="candidate-tools-flac">Candidate tools, <em>FLAC</em></h2>
+<p>The set of candidate tools is identical to the one used for the <em>WAVE</em> analysis, with two exceptions:</p>
+<ul>
+<li><a href="https://xiph.org/flac/"><strong>flac</strong></a> is the reference implementation of the <em>FLAC</em> format. The tested version is 1.3.0.</li>
+<li>Since Jhove does not include a <em>FLAC</em> module, it was not used.</li>
+</ul>
+<h3 id="flac">Flac</h3>
+<p>The Flac tool is able to encode audio to <em>FLAC</em>, and decode and analyze <em>FLAC</em> files. For this tests I ran it with the * -t* (or <em>--test</em>) option:</p>
+<pre><code>flac -t foo.flac</code></pre>
+<p>This decodes a <em>FLAC</em> without writing the decoded data to a file. Any errors during the decoding process are reported to the standard error stream.</p>
+<h2 id="results-flac">Results, <em>FLAC</em></h2>
+<p>The full output results of each tool can be found <a href="https://github.com/KBNLresearch/detectDamagedAudio/tree/master/outputFLAC">here</a>.</p>
+<h3 id="shntool-2">Shntool</h3>
+<p>Even though Shntool supports <em>FLAC</em>, it was not able to detect the missing data in any of the files:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">File</th>
+<th align="left">Result</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">frogs-01.flac</td>
+<td align="left">File probably truncated: no</td>
+</tr>
+<tr class="even">
+<td align="left">frogs-01-last-byte-missing.flac</td>
+<td align="left">File probably truncated: no</td>
+</tr>
+<tr class="odd">
+<td align="left">frogs-01-last-1000-bytes-missing.flac</td>
+<td align="left">File probably truncated: no</td>
+</tr>
+<tr class="even">
+<td align="left">frogs-01-byte-missing-at-offset-651202.flac</td>
+<td align="left">File probably truncated: no</td>
+</tr>
+</tbody>
+</table>
+<p>So, Shntool does not provide any meaningful information on whether a <em>FLAC</em> is damaged.</p>
+<h3 id="ffmpeg-2">Ffmpeg</h3>
+<p>Here are the results for Ffmpeg:</p>
+<table>
+<colgroup>
+<col />
+<col />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">File</th>
+<th align="left">Result</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">frogs-01.flac</td>
+<td align="left">-</td>
+</tr>
+<tr class="even">
+<td align="left">frogs-01-last-byte-missing.flac</td>
+<td align="left">[flac @ 0x294b860] overread: 1<br>Error while decoding stream #0:0: Invalid data found when processing input</td>
+</tr>
+<tr class="odd">
+<td align="left">frogs-01-last-1000-bytes-missing.flac</td>
+<td align="left">[flac @ 0x3c5d860] overread: 1<br>Error while decoding stream #0:0: Invalid data found when processing input</td>
+</tr>
+<tr class="even">
+<td align="left">frogs-01-byte-missing-at-offset-651202.flac</td>
+<td align="left">[flac @ 0x279faa0] overread: 1<br>Error while decoding stream #0:0: Invalid data found when processing input</td>
+</tr>
+</tbody>
+</table>
+<p>So, Ffmpeg was able to identify all damaged <em>FLAC</em>s.</p>
+<h3 id="mediainfo-2">Mediainfo</h3>
+<p>Similar to the <em>WAVE</em> results, Mediainfo again didn't report errors or warnings for any of these files.</p>
+<h3 id="flac-1">Flac</h3>
+<p>Finally the results for the Flac tool:</p>
+<table>
+<colgroup>
+<col />
+<col />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">File</th>
+<th align="left">Result</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">frogs-01.flac</td>
+<td align="left">-</td>
+</tr>
+<tr class="even">
+<td align="left">frogs-01-last-byte-missing.flac</td>
+<td align="left">ERROR while decoding data<br>state = FLAC__STREAM_DECODER_END_OF_STREAM| |frogs-01-last-1000-bytes-missing.flac|ERROR while decoding data<br>state = FLAC__STREAM_DECODER_END_OF_STREAM| |frogs-01-byte-missing-at-offset-651202.flac|ERROR while decoding data<br>state = FLAC__STREAM_DECODER_READ_FRAME|</td>
+</tr>
+</tbody>
+</table>
+<p>So, the Flac tool was able to identify all defective files<a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a>.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Out of the candidate tools considered here, only Shntool was able to identify all damaged <em>WAVE</em> files in this experiment. As a result, this (ancient!) tool still appears to be the best choice for detecting damaged <em>WAVE</em> files. Surpringly, Jhove was unable to detect <em>any</em> of the damaged files at all, and is probably best avoided for this particular purpose. For <em>FLAC</em>, both the Flac tool (<em>FLAC</em> reference implementation) and Ffmpeg were able to detect all damaged files, and both appear to be suitable tools.</p>
+<h2 id="dataset-and-scripts">Dataset and scripts</h2>
+<p>All example files, scripts and raw tool output are available here:</p>
+<p><a href="https://github.com/KBNLresearch/detectDamagedAudio" class="uri">https://github.com/KBNLresearch/detectDamagedAudio</a></p>
+<h2 id="post-scriptum-update-on-mediainfo-and-mediaconch">Post scriptum: update on MediaInfo and MediaConch</h2>
+<p>In response to this post the developers of MediaInfo <a href="https://github.com/MediaArea/MediaInfoLib/pull/352">added support for detecting truncated <em>WAVE</em> files</a>. This should cover all of the damaged <em>WAVE</em> files presented here. Moreover, their Twitter account announced that <a href="https://twitter.com/MediaArea_Net/status/817303297786867712">detection of <em>FLAC</em> flaws</a> is planned for the <a href="https://mediaarea.net/MediaConch/">MediaConch</a> tool, but that they are looking for sponsors for this.</p>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>Also, <a href="http://superuser.com/a/100290/681049">this thread on <em>superuser.com</em></a> recommends Ffmpeg for checking the integrity of video files.<a href="#fnref1">↩</a></p></li>
+<li id="fn2"><p>On a side note, I noticed that the error stream of the Flac tool sometimes contained a sequence of 21 non-printable '0x08' (backspace) characters. This is probably a bug.<a href="#fnref2">↩</a></p></li>
+</ol>
+</div>
